@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+spec:
+  sources:
+  - repoURL: 'https://giantswarm.github.io/giantswarm-catalog'
+    chart: hello-world-app
+    targetRevision: 1.x
+    helm:
+      releaseName: hello-world
+      valueFiles:
+      - $values/charts/prometheus/values.yaml
+  - repoURL: 'https://github.com/silveraignacio/argocd-demo.git'
+    targetRevision: main
+    path: hello-world
+    ref: values
+destination:
+    server: "https://kubernetes.default.svc"
+    namespace: kubeseal
