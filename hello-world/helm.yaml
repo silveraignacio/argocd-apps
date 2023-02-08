@@ -10,6 +10,5 @@ spec:
       valueFiles:
       - $values/charts/prometheus/values.yaml
   - repoURL: 'https://github.com/silveraignacio/argocd-demo.git'
-    targetRevision: main
     path: hello-world
     ref: values
