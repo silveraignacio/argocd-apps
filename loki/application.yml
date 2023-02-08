@@ -15,5 +15,5 @@ spec:
     repoURL: https://grafana.github.io/helm-charts
     targetRevision: 2.5.0
     helm:
-      valueFiles:
-        - values.yml
+      valueFiles: ['values.yml']
+
