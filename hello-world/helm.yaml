@@ -13,6 +13,3 @@ spec:
     targetRevision: main
     path: hello-world
     ref: values
-destination:
-    server: "https://kubernetes.default.svc"
-    namespace: kubeseal
