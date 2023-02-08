@@ -11,3 +11,6 @@ spec:
   - repoURL: 'https://github.com/silveraignacio/argocd-demo.git'
     path: prometheus
     ref: values
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
