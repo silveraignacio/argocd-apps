@@ -11,6 +11,7 @@ spec:
         valueFiles:
         - $values/values.yaml
     - repoURL: 'https://github.com/silveraignacio/argocd-demo.git'
+      target
       path: prometheus
       ref: values
     destination:

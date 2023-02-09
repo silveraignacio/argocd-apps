@@ -1,0 +1,8 @@
+apiVersion: v2
+name: app1
+type: application
+version: 1.0.0
+dependencies:
+  - name: app1
+    version: "1.x"
+    repository: "https://repo.opui.lionfish.tech/repository/helm-hosted"
