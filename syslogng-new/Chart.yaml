@@ -3,6 +3,6 @@ name: app1
 type: application
 version: 1.0.0
 dependencies:
-  - name: app1
+  - name: lionfish-syslog-ng
     version: "1.x"
     repository: "https://repo.opui.lionfish.tech/repository/helm-hosted"
