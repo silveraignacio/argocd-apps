@@ -1,5 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
+metadata:
+  name: hello-world-app
 spec:
   sources:
   - repoURL: 'https://giantswarm.github.io/giantswarm-catalog'
