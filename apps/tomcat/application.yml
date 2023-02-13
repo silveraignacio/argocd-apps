@@ -9,7 +9,6 @@ spec:
   source:
     chart: tomcat
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 10.5.14
     helm:
       releaseName: tomcat
   destination:
