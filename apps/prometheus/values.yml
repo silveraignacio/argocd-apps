@@ -1,6 +1,0 @@
-alertmanager:
-
-  ## Deploy alertmanager
-  ##
-  enabled: false
-

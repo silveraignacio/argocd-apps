@@ -3,6 +3,8 @@ kind: ApplicationSet
 metadata:
   name: argocd-apps
 spec:
+  syncPolicy:
+    automated: {}
   generators:
   - git:
       repoURL: https://github.com/silveraignacio/argocd-apps.git
