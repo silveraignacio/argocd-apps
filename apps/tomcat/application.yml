@@ -6,7 +6,7 @@ metadata:
 spec:
   syncPolicy:
     automated: {}
-  project: default
+  project: argocd
   source:
     chart: tomcat
     repoURL: https://charts.bitnami.com/bitnami
