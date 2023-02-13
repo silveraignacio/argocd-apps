@@ -2,11 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: tomcat
-  namespace: default
 spec:
   syncPolicy:
     automated: {}
-  project: argocd
+  project: default
   source:
     chart: tomcat
     repoURL: https://charts.bitnami.com/bitnami
@@ -15,4 +14,4 @@ spec:
       releaseName: tomcat
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: default
+    namespace: argocd
