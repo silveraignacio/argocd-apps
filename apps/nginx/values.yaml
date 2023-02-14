@@ -514,13 +514,13 @@ staticSitePVC: ""
 service:
   ## @param service.type Service type
   ##
-  #type: LoadBalancer
-  ## @param service.ports.http Service HTTP port
-  ## @param service.ports.https Service HTTPS port
-  ##
-  ports:
-    http: 80
-    https: 443
+  # type: LoadBalancer
+  # ## @param service.ports.http Service HTTP port
+  # ## @param service.ports.https Service HTTPS port
+  # ##
+  # ports:
+  #   http: 80
+  #   https: 443
   ##
   ## @param service.nodePorts [object] Specify the nodePort(s) value(s) for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
