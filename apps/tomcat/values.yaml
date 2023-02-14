@@ -418,7 +418,7 @@ service:
   extraPorts: []
   ## @param service.loadBalancerIP Port Use serviceLoadBalancerIP to request a specific static IP, otherwise leave blank
   ##
-  loadBalancerIP: "192.168.49.2"
+  loadBalancerIP: ""
   ## @param service.clusterIP Service Cluster IP
   ## e.g.:
   ## clusterIP: None
