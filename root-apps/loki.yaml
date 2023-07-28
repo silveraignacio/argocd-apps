@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'loki-monitoring'
+spec:
+  project: devops
+  sources:
+    - repoURL: 'https://charts.bitnami.com/bitnami'
+      targetRevision: 5.9.2
+      chart: loki
+      helm:
+      valueFiles:
+      - $values/values/loki.yaml
+    - repoURL: https://github.com/silveraignacio/argocd-apps.git
+      targtRevision: HEAD
+      ref: values
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: monitoring
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
