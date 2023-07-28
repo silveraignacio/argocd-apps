@@ -5,7 +5,7 @@ metadata:
 spec:
   project: devops
   sources:
-    - repoURL: 'https://charts.bitnami.com/bitnami'
+    - repoURL: 'https://grafana.github.io/helm-charts'
       targetRevision: 5.9.2
       chart: loki
       helm:
