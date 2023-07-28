@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ''
+  name: 'prometheus-monitoring'
 spec:
   project: devops
   source:
