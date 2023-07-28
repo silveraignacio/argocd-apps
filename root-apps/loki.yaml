@@ -11,7 +11,7 @@ spec:
       helm:
       valueFiles:
       - $values/values/loki.yaml
-    - repoURL: https://github.com/silveraignacio/argocd-apps.git
+    - repoURL: git@github.com:silveraignacio/argocd-apps.git
       targtRevision: HEAD
       ref: values
   destination:
