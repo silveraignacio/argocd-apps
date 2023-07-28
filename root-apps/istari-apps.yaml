@@ -22,6 +22,4 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: argocd
-      syncPolicy:
-        automated: {}
+        namespace: apps
