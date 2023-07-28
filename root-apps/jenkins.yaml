@@ -13,7 +13,7 @@ spec:
     chart: jenkins
     helm:
       valueFiles:
-      - $values/jenkins.yaml
+      - $values/values/jenkins.yaml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: cicd
