@@ -5,15 +5,15 @@ metadata:
 spec:
   project: devops
   sources:
-    - repoURL: 'https://charts.jenkins.io'
-      targetRevision: 4.5.0
-      chart: jenkins
-      helm:
+  - repoURL: 'https://charts.jenkins.io'
+    targetRevision: 4.5.0
+    chart: jenkins
+    helm:
       valueFiles:
       - $values/values/jenkins.yaml
-    - repoURL: git@github.com:silveraignacio/argocd-apps.git
-      targtRevision: HEAD
-      ref: values
+  - repoURL: git@github.com:silveraignacio/argocd-apps.git
+    targtRevision: HEAD
+    ref: values
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: cicd
