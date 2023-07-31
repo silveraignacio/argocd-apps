@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'gatekeeper'
+spec:
+  project: devops
+  sources:
+  - repoURL: 'https://open-policy-agent.github.io/gatekeeper/charts'
+    targetRevision: 3.12.0
+    chart: gatekeeper
+  - repoURL: 'git@github.com:silveraignacio/argocd-apps.git'
+    path: gatekeeper-policies
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: gatekeeper-system
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
