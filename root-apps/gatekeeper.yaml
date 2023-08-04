@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: 'gatekeeper'
 spec:
-  project: devops
+  project: default
   sources:
   - repoURL: 'https://open-policy-agent.github.io/gatekeeper/charts'
     targetRevision: 3.12.0
