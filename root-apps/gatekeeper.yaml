@@ -10,6 +10,8 @@ spec:
     chart: gatekeeper
   - repoURL: 'git@github.com:silveraignacio/argocd-apps.git'
     path: gatekeeper-base
+  - repoURL: 'git@github.com:silveraignacio/argocd-apps.git'
+    path: gatekeeper-env-configs-dev
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: gatekeeper-system
