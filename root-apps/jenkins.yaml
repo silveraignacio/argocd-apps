@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: 'jenkins'
 spec:
-  project: devops
+  project: default
   sources:
   - repoURL: git@github.com:silveraignacio/argocd-apps.git
     ref: values

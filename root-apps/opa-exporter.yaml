@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opa-exporter
+  namespace: monitoring
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/silveraignacio/argocd-apps.git
+    targetRevision: HEAD
+    path: root-apps/opa-scorecard
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: monitoring
