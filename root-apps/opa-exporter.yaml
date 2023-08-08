@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/silveraignacio/argocd-apps.git
     targetRevision: HEAD
-    path: root-apps/opa-scorecard
+    path: root-apps/opa-exporter
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
