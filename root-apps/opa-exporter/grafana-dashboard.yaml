@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: opa-dashboard
+  name: opa-grafana-dashboard
   labels:
     grafana_dashboard: "1"
-namespace: monitoring
+  namespace: monitoring
 data:
   opa-dashboard.json: |-
     {
