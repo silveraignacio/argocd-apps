@@ -7,6 +7,21 @@ prometheus:
     - job_name: opa-exporter
       kubernetes_sd_configs:
         - role: service
+    - job_name: 'kubernetes-pods'
+      kubernetes_sd_configs:
+      - role: pod
+      relabel_configs:
+      # Scrape only pods with the annotation: prometheus.io/scrape = true
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+        action: keep
+        regex: true
+
+      # If prometheus.io/port is specified, scrape this port instead of the default
+      - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+        action: replace
+        regex: ([^:]+)(?::\d+)?;(\d+)
+        replacement: $1:$2
+        target_label: __address__
 
 grafana:
   plugins:
