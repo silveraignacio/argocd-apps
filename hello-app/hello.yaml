@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-app
+  namespace: default
+spec:
+  project: default
+  source:
+    chart: hello
+    repoURL: https://www.kleinloog.ch/hello-helm/
+    targetRevision: 0.4.0-rc2
+    helm:
+      valueFiles:
+        -  https://raw.githubusercontent.com/silveraignacio/argocd-apps/main/values/hello.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
