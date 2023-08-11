@@ -5,7 +5,7 @@ metadata:
   labels:
     app: opa-exporter
   name: opa-exporter
-  namespace: opa-exporter
+  namespace: gatekeeper-system
 spec:
   replicas: 1
   selector:
