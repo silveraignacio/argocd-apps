@@ -15,8 +15,8 @@ spec:
     #   - $values/values/gatekeeper.yaml
   - repoURL: 'git@github.com:silveraignacio/argocd-apps.git'
     path: gatekeeper-base
-  # - repoURL: 'git@github.com:silveraignacio/argocd-apps.git'
-  #   path: gatekeeper-env-configs/dev
+  - repoURL: 'git@github.com:silveraignacio/argocd-apps.git'
+    path: opa-exporter
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: gatekeeper-system
